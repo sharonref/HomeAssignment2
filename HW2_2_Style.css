@@ -1,0 +1,388 @@
+html {
+  scroll-behavior: smooth;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+/* ===== HEADER =====*/
+.site-header {
+  position: sticky;
+  top: 0;
+  background-color: #023535;
+  z-index: 1;
+}
+
+.myName {
+  font-weight: bold;
+  font-size: 35px;
+  color: #facfce;
+  margin-bottom: 0px;
+}
+
+/*.active_page {
+  border: 3px solid #015958;
+  border-radius: 15px;
+  background-color: #015958;
+  padding: 4px 3px;
+  max-width: fit-content;
+}*/
+
+.nav_item {
+  font-weight: normal; /* Set font weight to normal for regular items */
+}
+.nav_item.active_page {
+  font-weight: bold; /* Set font weight to bold for the active_page item */
+}
+
+@media (min-width: 700px) {
+  .mobile_nav {
+    display: none;
+  }
+
+  .site-header_wrapper {
+    display: block;
+    text-align: center;
+  }
+  .nav_wrapper {
+    display: inline-flex;
+    list-style-type: none;
+    text-align: center;
+    min-width: 600px;
+    justify-content: space-between;
+  }
+  .nav_wrapper a {
+    color: #facfce;
+  }
+  .icon {
+    display: none;
+  }
+}
+
+@media (max-width: 699px) {
+  .nav {
+    display: none;
+  }
+  .mobile_nav {
+    display: block;
+  }
+  .mobile_nav_wrapper {
+    list-style-type: none;
+    padding-top: 8px;
+    padding-bottom: 2px;
+  }
+  .mobile_nav a {
+    color: #facfce;
+  }
+  .floating-menu {
+    border: 1px solid #facfce;
+    border-radius: 15px;
+    box-shadow: 0 0 4px 3px rgba(0, 0, 0, 0.547);
+    background-color: rgb(2, 53, 53, 0.8);
+    position: absolute;
+    top: 0;
+    width: 170px;
+    padding: 10px;
+    transform: translateX(-105%);
+  }
+  #close-menu {
+    position: absolute;
+    right: 10px;
+  }
+
+  #open-menu {
+    background-color: #facfce;
+    color: #023535;
+    border: none;
+    cursor: pointer;
+    margin: 5px;
+  }
+  #close-menu {
+    background-color: #facfce;
+    color: #023535;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+/* ===== FOOTER =====*/
+.site-fotter_wrapper {
+  position: relative;
+  background-color: #facfce;
+}
+
+@media (min-width: 700px) {
+  .site-fotter_wrapper {
+    display: block;
+    text-align: center;
+  }
+  .search_wrapper {
+    display: inline-flex;
+    list-style-type: none;
+    text-align: center;
+    min-width: 600px;
+    justify-content: space-between;
+  }
+  .site-fotter_wrapper h2 {
+    margin: 0;
+    padding: 15px 0 0px 0;
+    color: #023535;
+  }
+}
+
+@media (max-width: 699px) {
+  .site-fotter_wrapper {
+    display: block;
+    justify-content: space-between;
+    text-align: center;
+    margin: auto;
+  }
+  .search_wrapper {
+    list-style-type: none;
+    padding-bottom: 2px;
+  }
+  .site-fotter_wrapper h2 {
+    margin: 0;
+    color: #023535;
+  }
+  .conect_img {
+    width: 20%;
+  }
+}
+
+/* ===== HOME PAGE =====*/
+.home_pic-sec {
+  background-color: #facfce;
+  height: 210px;
+  padding: 0px;
+  position: relative;
+}
+
+#my_pic {
+  margin-top: 5px;
+  width: 380px;
+  height: 380px;
+  background-image: url(pics/Picture1.jpg);
+  background-position: center;
+  background-size: cover;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.home_text-sec {
+  background-color: #023535;
+  height: max-content;
+  margin: 0px 0 0 0;
+  padding: 220px 0px 20px 0px;
+  text-align: center;
+  color: #facfce;
+}
+.home_page-name {
+  font-size: 52px;
+}
+.home_page-par {
+  letter-spacing: 1px;
+  line-height: 1.2;
+}
+.home_page-final-sen {
+  font-size: larger;
+}
+
+@media (max-width: 699px) {
+  #my_pic {
+    background-image: url(pics/Picture1.jpg);
+    background-size: auto;
+  }
+  .home_page-par {
+    padding: 0px 5px 0 5px;
+  }
+}
+
+/* ===== ABOUT ME =====*/
+.aboutme_page {
+  background-color: #facfce;
+  color: #023535;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  line-height: 1.2;
+}
+.aboutme_pic {
+  border-color: #facfce;
+  box-shadow: 0 0 4px 3px rgba(0, 0, 0, 0.547);
+  margin: 10px;
+  width: 30%;
+  max-width: 300px;
+}
+.aboutme_text {
+  padding-left: 20px;
+}
+.aboutme_page2 {
+  background-color: #023535;
+  color: #facfce;
+  padding: 10px 10px 10px 10px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+@media (max-width: 699px) {
+  .aboutme_page {
+    background-color: #facfce;
+    display: block;
+    height: max-content;
+    text-align: center;
+    padding: 10px 0px 10px 0px;
+  }
+  .aboutme_pic {
+    border-color: #facfce;
+    box-shadow: 0 0 4px 3px rgba(0, 0, 0, 0.547);
+    padding-top: 10px;
+    width: 70%;
+  }
+  /*.aboutme_page2 {
+    
+  }*/
+}
+
+/* ===== RESUME =====*/
+.resume_page {
+  padding: 10px 10px 10px 10px;
+  background-color: #facfce;
+  line-height: 1.2;
+  display: flex;
+  justify-content: space-around;
+}
+
+.the_exp {
+  color: #facfce;
+  background-color: rgb(2, 53, 53, 0.85);
+  margin: 0px 10px 0px 10px;
+  padding: 5px 10px 5px 10px;
+}
+.the_exp h3 {
+  text-decoration: underline;
+  font-size: 20;
+}
+.the_exp h4 {
+  text-decoration: underline;
+}
+
+.left {
+  gap: 10 px;
+}
+
+.the_edu {
+  color: #facfce;
+  background-color: rgb(2, 53, 53, 0.85);
+
+  padding: 5px 10px 5px 10px;
+}
+.the_edu h3 {
+  text-decoration: underline;
+  font-size: 20;
+}
+.the_edu h4 {
+  text-decoration: underline;
+}
+
+.lan {
+  color: #facfce;
+  background-color: rgb(2, 53, 53, 0.85);
+}
+
+.lan-container {
+  width: 100%;
+  color: #facfce;
+  background: #ddd;
+}
+.Hebrew {
+  width: 100%;
+  background-color: #023535;
+}
+.English {
+  width: 90%;
+  background-color: #023535;
+}
+.Russian {
+  width: 85%;
+  background-color: #023535;
+}
+.lan h2 {
+  margin-left: 10px;
+  padding-top: 20px;
+}
+.lan h3 {
+  margin-left: 10px;
+}
+
+.intr {
+  color: #facfce;
+  background-color: rgb(2, 53, 53, 0.85);
+
+  padding: 5px 10px 5px 10px;
+}
+
+.soon {
+  color: #facfce;
+  background-color: rgb(2, 53, 53, 0.85);
+  padding: 5px 10px 5px 10px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.hr_1 {
+  padding: 5px 0px 0px 0px;
+  background-color: #023535;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+@media (max-width: 699px) {
+  .resume_page {
+    display: inline-block;
+  }
+  .the_exp {
+    margin: 0px;
+  }
+  .the_edu {
+    margin: 0px;
+  }
+}
+
+/* ===== RESUME =====*/
+.projects_page {
+  padding: 10px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+#cewm {
+  background-color: #facfce;
+  color: #023535;
+}
+#FOTD {
+  background-color: #023535;
+  color: #facfce;
+}
+#cewm img {
+  max-width: 600px;
+  margin-right: 10px;
+}
+#FOTD img {
+  max-width: 600px;
+  margin-right: 10px;
+}
+
+@media (max-width: 699px) {
+  .projects_page {
+    display: inline-block;
+  }
+  #cewm img {
+    width: 50%;
+  }
+  #FOTD img {
+    width: 50%;
+  }
+}
